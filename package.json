@@ -1,0 +1,16 @@
+{
+  "name": "framer-motion-tutorial",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Practice project for framer-motion",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JHSeo-git/framer-motion-tutorial.git"
+  },
+  "author": {
+    "name": "JHSeo",
+    "email": "qnfqnfqnf@gmail.com"
+  },
+  "license": "MIT"
+}
