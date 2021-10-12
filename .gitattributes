@@ -1,0 +1,3 @@
+.yarn/**           linguist-vendored
+.yarn/releases*    binary
+.pnp.js            binary linguist-vendored
