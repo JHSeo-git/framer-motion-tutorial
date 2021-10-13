@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[hash].js',
+    filename: '[name].[chunkhash].js',
   },
   module: {
     rules: [
