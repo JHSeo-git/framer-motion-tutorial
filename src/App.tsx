@@ -1,11 +1,16 @@
-import { useEffect, useState } from 'react'
+import { css } from '@linaria/core'
+import AnimatedButton from './components/AnimatedButton'
 
 function App() {
-  const [t, setT] = useState(false)
-  useEffect(() => {
-    setT(true)
-  }, [])
-  return <div>App</div>
+  return (
+    <section className={box}>
+      <AnimatedButton />
+    </section>
+  )
 }
+
+const box = css`
+  padding: 50px;
+`
 
 export default App
