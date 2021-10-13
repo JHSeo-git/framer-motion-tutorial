@@ -1,12 +1,12 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 html,
 body,
 #_root {
-  margin: 0;
-  padding: 0;
   height: 100%;
 }
 
@@ -17,12 +17,14 @@ body {
 }
 
 button {
-  margin: 0;
-  padding: 0;
+  outline: none;
+  border: none;
+
   cursor: pointer;
   font-family: inherit;
 }
 
-:root {
-  --color-primary: black;
+p,
+span {
+  word-break: keep-all;
 }

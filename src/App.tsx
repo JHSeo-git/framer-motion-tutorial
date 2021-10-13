@@ -1,16 +1,19 @@
-import { css } from '@linaria/core'
-import AnimatedButton from './components/AnimatedButton'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Layout from './components/Layout'
+import Home from './pages/Home'
 
 function App() {
   return (
-    <section className={box}>
-      <AnimatedButton />
-    </section>
+    <Layout>
+      <Router>
+        <Switch>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
+    </Layout>
   )
 }
-
-const box = css`
-  padding: 50px;
-`
 
 export default App

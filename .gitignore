@@ -1,6 +1,9 @@
 # build
 dist
 
+# linaria
+.linaria-cache
+
 # dependencies
 node_modules
 *.log
