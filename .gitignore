@@ -2,7 +2,7 @@
 dist
 
 # linaria
-.linaria-cache
+.linaria-cache/
 
 # dependencies
 node_modules
