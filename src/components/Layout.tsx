@@ -13,7 +13,7 @@ function Layout({ children }: LayoutProps) {
 }
 const box = css`
   background-color: var(--gray-color-100);
-  height: 100%;
+  min-height: 100%;
 `
 const main = css``
 
