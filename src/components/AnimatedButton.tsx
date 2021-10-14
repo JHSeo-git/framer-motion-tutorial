@@ -1,10 +1,14 @@
 import { motion } from 'framer-motion'
 import { css } from '@linaria/core'
 
-function AnimatedButton() {
+type AnimatedButtonProps = {
+  name: string
+}
+
+function AnimatedButton({ name }: AnimatedButtonProps) {
   return (
     <motion.button className={buttonStyle}>
-      <span>Button</span>
+      <span>{name}</span>
     </motion.button>
   )
 }
