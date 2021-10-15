@@ -3,8 +3,8 @@ import { css } from '@linaria/core'
 import useInView from '../hooks/useInView'
 import { useEffect, useMemo, useRef } from 'react'
 
-type AnimatedCardType = 'slide' | 'stack' | 'scale'
-type AnimatedCardDirection = {
+export type CardType = 'slide' | 'stack' | 'scale'
+export type CardDirection = {
   slide: {
     direction: 'right' | 'left'
   }
@@ -15,10 +15,10 @@ type AnimatedCardDirection = {
     direction: 'all'
   }
 }
-type ExtractCardDirection<Type extends AnimatedCardType> =
-  AnimatedCardDirection[Type]['direction']
+export type ExtractCardDirection<Type extends CardType> =
+  CardDirection[Type]['direction']
 
-type AnimatedCardProps<Type extends AnimatedCardType> = {
+type CardProps<Type extends CardType> = {
   children: React.ReactNode
   type: Type
   direction: ExtractCardDirection<Type>
@@ -26,17 +26,18 @@ type AnimatedCardProps<Type extends AnimatedCardType> = {
   distance?: number
 }
 
-function AnimatedCard<Type extends AnimatedCardType>({
+function Card<Type extends CardType>({
   children,
   type,
   direction,
   duration = 0.3,
   distance = 20,
-}: AnimatedCardProps<Type>) {
+}: CardProps<Type>) {
   const ref = useRef<HTMLDivElement>(null)
   const { inView } = useInView(ref, { rootMargin: '-100px 0px' })
   const controls = useAnimation()
 
+  // TODO: refactoring
   const motionVariants: Variants | undefined = useMemo(() => {
     const negative =
       (direction as ExtractCardDirection<typeof type>) === ('down' || 'right')
@@ -110,4 +111,4 @@ const box = css`
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 `
 
-export default AnimatedCard
+export default Card

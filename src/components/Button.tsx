@@ -1,13 +1,14 @@
 import { motion } from 'framer-motion'
 import { css } from '@linaria/core'
 
-type AnimatedButtonProps = {
+type ButtonProps = {
   name: string
-}
+  progress?: number
+} & React.ComponentProps<typeof motion.button>
 
-function AnimatedButton({ name }: AnimatedButtonProps) {
+function Button({ name, progress, ...rest }: ButtonProps) {
   return (
-    <motion.button className={buttonStyle}>
+    <motion.button className={buttonStyle} {...rest}>
       <span>{name}</span>
     </motion.button>
   )
@@ -29,4 +30,4 @@ const buttonStyle = css`
   color: white;
 `
 
-export default AnimatedButton
+export default Button
