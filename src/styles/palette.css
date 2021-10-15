@@ -2,11 +2,23 @@
   --gray-color-50: #fafafa;
   --gray-color-100: #f5f5f5;
 
+  --blue-color-50: #e3f2fd;
   --blue-color-100: #bbdefb;
   --blue-color-300: #64b5f6;
   --blue-color-500: #2196f3;
 
+  --cyan-color-50: #e0f7fa;
   --cyan-color-100: #b2ebf2;
   --cyan-color-300: #4dd0e1;
   --cyan-color-500: #00bcd4;
+
+  --purple-color-50: #f3e5f5;
+  --purple-color-100: #e1bee7;
+
+  --pink-color-50: #fce4ec;
+  --pink-color-100: #f8bbd0;
+
+  --lime-color-100: #f0f4c3;
+
+  --yellow-color-100: #fff9c4;
 }
