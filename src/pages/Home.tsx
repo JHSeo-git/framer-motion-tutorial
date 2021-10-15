@@ -1,13 +1,15 @@
 import { css } from '@linaria/core'
 import AnimatedButton from '../components/AnimatedButton'
-import Card from '../components/Card'
+import AnimatedCard from '../components/AnimatedCard'
 
 function Home() {
   return (
     <section className={box}>
       <AnimatedButton name="Button" />
       {Array.from({ length: 20 }).map((_, idx) => (
-        <Card key={idx}>Card {idx}</Card>
+        <AnimatedCard key={idx} type="slide" direction="left">
+          AnimatedCard {idx}
+        </AnimatedCard>
       ))}
     </section>
   )
