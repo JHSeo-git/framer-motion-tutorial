@@ -27,6 +27,21 @@ module.exports = {
         ],
       },
       {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              prettier: false,
+              svgo: false,
+              svgoConfig: {
+                plugins: [{ removeViewBox: false }],
+              },
+            },
+          },
+        ],
+      },
+      {
         test: /\.css$/,
         use: [
           {
@@ -39,7 +54,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(jpg|png|gif|woff|woff2|eot|ttf|svg)$/,
+        test: /\.(jpg|png|gif|woff|woff2|eot|ttf)$/,
         type: 'asset/resource',
       },
     ],
