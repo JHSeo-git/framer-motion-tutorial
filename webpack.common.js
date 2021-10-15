@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = {
   entry: './src/index.tsx',
   output: {
+    publicPath: '/',
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[chunkhash].js',
   },
@@ -56,6 +57,10 @@ module.exports = {
       {
         test: /\.(jpg|png|gif|woff|woff2|eot|ttf)$/,
         type: 'asset/resource',
+      },
+      {
+        mimetype: 'text/css',
+        type: 'css',
       },
     ],
   },
