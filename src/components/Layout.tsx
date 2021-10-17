@@ -28,10 +28,10 @@ const box = css`
 
     background: linear-gradient(
       45deg,
-      var(--pink-color-100),
-      var(--blue-color-100),
-      var(--purple-color-100),
-      var(--cyan-color-100)
+      var(--color-pink-100),
+      var(--color-blue-100),
+      var(--color-purple-100),
+      var(--color-cyan-100)
     );
     background-size: 400% 100%;
     animation: gradient 10s ease infinite;

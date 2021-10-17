@@ -7,7 +7,10 @@ function Home() {
       <h1>Samples for Framer motion</h1>
       <div className="grid">
         <AppLink to="/sample/card" className={overrideStyle}>
-          Card
+          CARD
+        </AppLink>
+        <AppLink to="/sample/tossbank" className={overrideStyle}>
+          TOSS BANK
         </AppLink>
       </div>
     </section>
@@ -32,7 +35,7 @@ const box = css`
   h1 {
     font-size: 3rem;
     margin-bottom: 50px;
-    color: var(--gray-color-900);
+    color: var(--color-gray-900);
   }
 
   .grid {
@@ -44,9 +47,10 @@ const box = css`
 `
 
 const overrideStyle = css`
-  color: var(--gray-color-900);
+  padding: 1rem 1.5rem;
+  color: var(--color-gray-900);
   background-color: #ffffff;
-  border-radius: 1rem;
+  border-radius: 9999px;
   transition: all 0.2s ease;
 
   @media (hover: hover) {

@@ -21,8 +21,8 @@ const buttonStyle = css`
 
   background: linear-gradient(
     90deg,
-    var(--blue-color-300) 20%,
-    var(--cyan-color-300) 80%
+    var(--color-blue-300) 20%,
+    var(--color-cyan-300) 80%
   );
   border-radius: 9999px;
 

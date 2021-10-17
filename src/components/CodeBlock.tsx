@@ -27,8 +27,8 @@ const box = css`
   border-radius: 1rem;
   background: linear-gradient(
     '90deg',
-    var(--pink-color-50),
-    var(--blue-color-50)
+    var(--color-pink-50),
+    var(--color-blue-50)
   );
 `
 

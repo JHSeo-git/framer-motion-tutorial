@@ -40,7 +40,7 @@ const box = css`
 
   h1,
   h2 {
-    color: var(--gray-color-900);
+    color: var(--color-gray-900);
   }
 
   .row {
@@ -56,13 +56,13 @@ const box = css`
     margin: 0 20px;
     height: 20px;
     width: 2px;
-    background-color: var(--gray-color-500);
+    background-color: var(--color-gray-500);
   }
 `
 
 const overrideAppLink = css`
   border-radius: 9999px;
-  background-color: var(--gray-color-900);
+  background-color: var(--color-gray-900);
   color: #ffffff;
   transition: all 0.1s linear;
 
@@ -70,7 +70,7 @@ const overrideAppLink = css`
     &:hover {
       text-decoration: none;
       background-color: #ffffff;
-      color: var(--gray-color-900);
+      color: var(--color-gray-900);
     }
   }
 `
