@@ -29,7 +29,6 @@ function AppLink({ to, className, children }: AppLinkProps) {
 }
 
 const linkStyle = css`
-  padding: 1rem 1.5rem;
   display: inline-block;
 `
 
