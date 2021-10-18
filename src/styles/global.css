@@ -23,12 +23,18 @@ a {
   text-decoration: none;
 }
 
+button,
+[type='button'] {
+  appearance: button;
+}
+
 a,
 button {
   outline: none;
   border: none;
 
   cursor: pointer;
+  user-select: none;
   font-family: inherit;
 }
 
