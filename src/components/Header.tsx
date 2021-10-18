@@ -45,6 +45,8 @@ const inner = css`
   max-width: 1140px;
   padding: 0 48px;
 
+  background-color: #ffffff;
+
   display: flex;
   align-items: center;
 
