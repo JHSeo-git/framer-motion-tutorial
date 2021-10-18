@@ -1,33 +1,66 @@
 import { motion } from 'framer-motion'
-import { css } from '@linaria/core'
+import { css, cx } from '@linaria/core'
 
 type ButtonProps = {
-  name: string
   progress?: number
+  children?: React.ReactNode
 } & React.ComponentProps<typeof motion.button>
 
-function Button({ name, progress, ...rest }: ButtonProps) {
+function Button({ progress, className, children, ...rest }: ButtonProps) {
   return (
-    <motion.button className={buttonStyle} {...rest}>
-      <span>{name}</span>
+    <motion.button
+      type="button"
+      className={cx(buttonStyle, className)}
+      {...rest}
+    >
+      {children}
     </motion.button>
   )
 }
 
 const buttonStyle = css`
-  padding: 1rem 1.5rem;
+  // default
+  position: relative;
   margin: 0 auto;
-  display: flex;
+  text-align: center;
+  vertical-align: middle;
 
-  background: linear-gradient(
-    90deg,
-    var(--color-blue-300) 20%,
-    var(--color-cyan-300) 80%
-  );
-  border-radius: 9999px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
-  font-size: 18px;
-  color: white;
+  background-color: var(--color-gray-900);
+
+  font-size: 14px;
+  color: #ffffff;
+
+  transition: background-color 0.2s ease, color 0.1s ease,
+    border-color 0.2s ease;
+
+  @media (hover: hover) {
+    &:hover {
+      border: 2px solid var(--color-gray-900);
+      background-color: #ffffff;
+      color: var(--color-gray-900);
+    }
+  }
+
+  @media (min-width: 640px) {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  &.primary {
+    background-color: var(--color-blue-900);
+    color: #ffffff;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: #ffffff;
+        color: var(--color-blue-900);
+      }
+    }
+  }
 `
 
 export default Button
