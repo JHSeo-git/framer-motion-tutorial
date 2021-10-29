@@ -42,3 +42,8 @@ p,
 span {
   word-break: keep-all;
 }
+
+ul,
+ol {
+  list-style: none;
+}
