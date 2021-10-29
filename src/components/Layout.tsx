@@ -7,6 +7,8 @@ type LayoutProps = {
 function Layout({ children }: LayoutProps) {
   return (
     <div className={box}>
+      <div className={headerSpace} />
+
       <div className="bg"></div>
       <main className={main}>{children}</main>
     </div>
@@ -49,6 +51,15 @@ const box = css`
     }
   }
 `
-const main = css``
+
+const headerSpace = css`
+  height: var(--size-header-height);
+`
+
+const main = css`
+  max-width: 1140px;
+  padding: 0 50px;
+  margin: 0 auto;
+`
 
 export default Layout

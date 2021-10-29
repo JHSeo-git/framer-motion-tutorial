@@ -1,6 +1,6 @@
 import { css, cx } from '@linaria/core'
 import { useCallback, useEffect, useRef, useState } from 'react'
-import IconTossBank from '../images/icons/tossbank.svg'
+import FramerIcon from '../assets/images/icons/framer.svg'
 import AppLink from './AppLink'
 
 function Header() {
@@ -23,13 +23,14 @@ function Header() {
   }, [handleScrolling])
 
   return (
-    <nav ref={ref} className={cx(header, isTop ? '' : 'outline')}>
-      <div className={inner}>
+    <header ref={ref} className={cx(header, isTop ? '' : 'outline')}>
+      <nav className={inner}>
         <AppLink to="/" className={overrideAppLink}>
-          <IconTossBank />
+          <FramerIcon />
+          <span>Framer</span>
         </AppLink>
-      </div>
-    </nav>
+      </nav>
+    </header>
   )
 }
 
@@ -50,7 +51,7 @@ const inner = css`
   height: var(--size-header-height);
   margin: 0 auto;
   max-width: 1140px;
-  padding: 0 48px;
+  padding: 0 50px;
 
   display: flex;
   align-items: center;
@@ -61,8 +62,12 @@ const overrideAppLink = css`
   justify-content: center;
   align-items: center;
   svg {
-    height: 20px;
-    width: auto;
+    height: 21px;
+    width: 14px;
+    margin-right: 1rem;
+  }
+  span {
+    font-weight: bold;
   }
 `
 
