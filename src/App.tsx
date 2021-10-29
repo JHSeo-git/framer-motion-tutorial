@@ -9,7 +9,7 @@ import Layout from './components/Layout'
 import Page404 from './pages/404'
 import Home from './pages/Home'
 import SampleCard from './pages/sample/SampleCard'
-import TossBank from './pages/sample/TossBank'
+import Bank from './pages/sample/Bank'
 
 function App() {
   return (
@@ -28,8 +28,8 @@ function App() {
               <Route path="/sample/card">
                 <SampleCard />
               </Route>
-              <Route path="/sample/tossbank">
-                <TossBank />
+              <Route path="/sample/bank">
+                <Bank />
               </Route>
             </Switch>
           </Route>
