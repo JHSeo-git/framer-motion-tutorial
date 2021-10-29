@@ -5,14 +5,20 @@ function Home() {
   return (
     <section className={box}>
       <h1>Samples for Framer motion</h1>
-      <div className="grid">
-        <AppLink to="/sample/card" className={overrideStyle}>
-          CARD
-        </AppLink>
-        <AppLink to="/sample/tossbank" className={overrideStyle}>
-          TOSS BANK
-        </AppLink>
-      </div>
+      <ul className={list}>
+        <li>
+          <AppLink to="/sample/card" className={overrideStyle}>
+            CARD Components
+          </AppLink>
+        </li>
+      </ul>
+      <ul className={list}>
+        <li>
+          <AppLink to="/sample/bank" className={overrideStyle}>
+            BANK PAGE
+          </AppLink>
+        </li>
+      </ul>
     </section>
   )
 }
@@ -22,34 +28,30 @@ const box = css`
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  // TODO: responsive style
-  @media (min-width: 800px) {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 100px 50px;
-  }
 
   h1 {
+    text-align: center;
     font-size: 3rem;
     margin-bottom: 50px;
     color: var(--color-gray-900);
   }
+`
 
-  .grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem;
+const list = css`
+  width: 100%;
+  margin-bottom: 20px;
+
+  li + li {
+    margin-top: 20px;
   }
 `
 
 const overrideStyle = css`
+  width: 100%;
   padding: 1rem 1.5rem;
   color: var(--color-gray-900);
   background-color: #ffffff;
+  font-weight: bold;
   border-radius: 9999px;
   transition: all 0.2s ease;
 

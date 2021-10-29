@@ -2,10 +2,9 @@ import { css } from '@linaria/core'
 import AnimateStack from '../../components/AnimateStack'
 import Button from '../../components/Button'
 
-function TossBank() {
+function Bank() {
   return (
     <>
-      <div className={headerSpace} />
       <section className={box}>
         <AnimateStack type="pull" direction="up" duration={0.5}>
           <h1>
@@ -21,10 +20,6 @@ function TossBank() {
     </>
   )
 }
-
-const headerSpace = css`
-  height: var(--size-header-height);
-`
 
 const box = css`
   padding-top: 100px;
@@ -64,4 +59,4 @@ const overrideButton = css`
   }
 `
 
-export default TossBank
+export default Bank
